@@ -1,0 +1,335 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@bannerbi1.11.1/font/bootstrap-icons.css");
+body {
+    background-color: whitesmoke;
+
+}
+
+.header{
+    margin: 0;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+
+}
+
+
+.position-relative{
+ height: 500px;
+}
+
+
+/* Banner*/
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+h1, p {
+    margin: 0;
+}
+
+/* banner Style */
+.banner {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.banner:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.banner-content {
+    z-index: 2; 
+}
+
+.banner h1 {
+    font-size: 16rem;
+    color: transparent; 
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: url('images/Electrical-Project-Manager.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.banner p {
+    font-size: 1.5rem;
+    color: white;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.btn {
+    padding: 15px 30px;
+    color: white;
+    border: none;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 0.5s; /* Delays text entrance for smooth transition */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner p {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Additional Section */
+.section {
+    padding: 50px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.section p {
+    font-size: 1.2rem;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.section {
+    padding: 50px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.portfolio {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Grid layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Grid items */
+.grid-item {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+.grid-item .content {
+    padding: 20px;
+}
+
+.grid-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.grid-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Hover */
+.grid-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+.services-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.services-grid-item {
+    background-color: #fff;
+    border-left: 5px solid #4CAF50;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-grid-item .icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.services-grid-item .icon img {
+    width: 60px;
+    height: auto;
+}
+
+.services-grid-item .content {
+    text-align: center;
+}
+
+.services-grid-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.services-grid-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Hover */
+.services-grid-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    border-left: 5px solid #2196F3;
+}
+.services-titles {
+    padding: 20px;
+    margin: auto;
+    max-width: 100%;
+}
+
+
+.services-titles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 20px;
+    width: 100%;
+    
+}
+
+
+.services-title-item {
+    background-color: #4CAF50;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.services-title-item h2 {
+    color: #fff;
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+
+.services-title-item:hover {
+    background-color: #2196F3;
+    transform: translateY(-5px);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .grid-container {
+        padding: 10px;
+    }
+
+    .grid-item {
+        padding: 10px;
+    }
+}

@@ -1,0 +1,12 @@
+CREATE DATABASE smart_home;
+
+USE smart_home;
+
+CREATE TABLE devices (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    type ENUM('Lightbulb', 'Sensor', 'Other') NOT NULL,
+    status ENUM('On', 'Off') DEFAULT 'Off',
+    brightness INT DEFAULT NULL,
+    threshold INT DEFAULT NULL
+);

@@ -1,0 +1,392 @@
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* General container for centering */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Form styles */
+.form-container {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    animation: fadeIn 0.8s ease-in-out;
+    margin: auto;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #555;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+button.danger {
+    background: #dc3545;
+}
+
+button.danger:hover {
+    background: #b02a37;
+}
+
+/* Slider styles */
+input[type="range"] {
+    width: 100%; 
+    margin-top: 10px;
+    -webkit-appearance: none;  
+    appearance: none;
+    height: 8px; 
+    background: #ddd; 
+    border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #007bff; 
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+/* Slider styling */
+input[type="range"] {
+    width: 100%;
+    margin-top: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Displaying slider value next to the slider */
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.slider-value {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Status Indicator */
+.status-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.status-light {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.status-light.on {
+    background: #28a745; /* Green for On */
+}
+
+.status-light.off {
+    background: #dc3545; /* Red for Off */
+}
+
+/* Table styles */
+.table-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table thead {
+    background: #007bff;
+    color: #fff;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .form-container {
+        max-width: 90%;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    input, select {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .status-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+#device-menu {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+}
+
+.device {
+    width: 60px;
+    height: 60px;
+    background-color: #eee;
+    margin: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.device:hover {
+    transform: scale(1.1);
+}
+
+.lightbulb {
+    background-color: #ffeb3b;
+}
+
+.sensor {
+    background-color: #e53935;
+}
+
+#house-layout {
+    position: relative;
+    width: 80%;
+    height: 80vh;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
+    grid-gap: 10px;
+    background-color: #f0f0f0;
+    border: 5px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.room {
+    position: relative;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.room-on {
+    background-color: #f3f4f6;
+}
+
+.room-1 { grid-column: 1; grid-row: 1; }
+.room-2 { grid-column: 2; grid-row: 1; }
+.room-3 { grid-column: 1; grid-row: 2; }
+.room-4 { grid-column: 2; grid-row: 2; }
+
+.device-in-room {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.device-in-room.lightbulb {
+    background-color: yellow;
+}
+
+.device-in-room.sensor {
+    background-color: red;
+}
+
+.room .device-in-room {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.room .device-in-room:hover {
+    transform: scale(1.2);
+}
+
+/* Light effect styles */
+.light-effect {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 0, 0.5);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.lightbulb-on .light-effect {
+    opacity: 1;
+}
+
+
